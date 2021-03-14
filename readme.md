@@ -27,27 +27,36 @@ Note that we will test code submissions on a number of files of various lengths 
 ##Approach
 
 #####Front end
+
 I have created a no thrills front end. I have used Thymeleaf template engine in order to output the needed data. 
 A simple form with a text box input has been used in order for the user to put any url of a txt file to be processed.
 
 #####Testing
+
 I have used junit testing in order to test the output of the given url within the spec.
 
-#####Architecture 
+#####Architecture
+
 I have an MVC architecture. I have abstraction from service using an interface to protect my code. As not much was needed of this application I have 1 model, 1 controller and 1 service.
 with more functionality this would grow.
 
 #####Data Storage
+
 I have tried to keep this as simple as possible just using in memory H2 data storage, if this was an actual project I would 
 probably use some better storage like postgres.
 
 #####The code
+
 I have tried to keep the code as simple at as readable as possible. I believe from functions are quite light-weight, as I have used a lot of
 library functions rather than spending a lot of time trying to create my own.
 
 I have tried to use an array of different methods to suit the task each function is tackling.
 
 I tried to think of worst case scenarios especially with the frequency output, as there could be multiple frequently
-occurring lengths.   
+occurring lengths. 
+
+This is the first time I have used maven I tend to use gradle.
+
+I have commented lots of the code in order to make it easier to understand.
 
 
