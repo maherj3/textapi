@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>
+            Data Output
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Word count = </td><td th:text="${output.wordCount}"></td>
+    </tr>
+    <tr>
+        <td>Average word length = </td><td th:text="${output.averageLength}"></td>
+    </tr>
+    <tr th:each="output: ${output.wordsLength}">
+        <td>Number of words of length </td><td th:text="${output.key}" />
+        <td> is </td><td th:text="${output.value}" />
+    </tr>
+    </tbody>
+</table>
+<table>
+    <tbody>
+    <tr th:each="output: ${output.frequency}">
+        <td>The most frequently occurring word length is </td><td th:text="${output.key}"></td>
+        <td>, for word lengths of </td><td th:text="${output.value}" />
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
