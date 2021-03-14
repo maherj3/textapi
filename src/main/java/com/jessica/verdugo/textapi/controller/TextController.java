@@ -25,14 +25,14 @@ public class TextController {
 
     @RequestMapping("/")
     public String index(){
-        return "firstPage";
+        return "firstPage"; //mapping to opening page
     }
 
     @RequestMapping("/sendUrl")
-    public String getOutput(@RequestParam(value = "url") String url, Model model) throws IOException {
+    public String getOutput(@RequestParam(value = "url") String url, Model model) throws IOException { //the input url for the text reader to read
         OutputModel outputModel = textService.outputModelCreate(new URL(url));
-        model.addAttribute("output", outputModel);
-        return "presentPage";
+        model.addAttribute("output", outputModel); //add the putput model to the front end model
+        return "presentPage"; //return the new page
     }
 
 }

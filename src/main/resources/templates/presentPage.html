@@ -15,12 +15,12 @@
     </thead>
     <tbody>
     <tr>
-        <td>Word count = </td><td th:text="${output.wordCount}"></td>
+        <td>Word count = </td><td th:text="${output.wordCount}"></td> <!--because we have used thymeleaf we can call upon the object and its attributes like so-->
     </tr>
     <tr>
         <td>Average word length = </td><td th:text="${output.averageLength}"></td>
     </tr>
-    <tr th:each="output: ${output.wordsLength}">
+    <tr th:each="output: ${output.wordsLength}"> <!--words length is a map so we can step through the entries like so calling upon the keys and values-->
         <td>Number of words of length </td><td th:text="${output.key}" />
         <td> is </td><td th:text="${output.value}" />
     </tr>
@@ -30,7 +30,7 @@
     <tbody>
     <tr th:each="output: ${output.frequency}">
         <td>The most frequently occurring word length is </td><td th:text="${output.key}"></td>
-        <td>, for word lengths of </td><td th:text="${output.value}" />
+        <td>, for word lengths of </td><td th:text="${output.value}" /><!--remember this value is a list-->
     </tr>
     </tbody>
 </table>

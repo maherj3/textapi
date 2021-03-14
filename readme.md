@@ -59,4 +59,6 @@ This is the first time I have used maven I tend to use gradle.
 
 I have commented lots of the code in order to make it easier to understand.
 
+#####To DO
 
+More fail safety is needed. Would use javascript to check the input string. NO need to pass it back if its never going to work.
